@@ -72,21 +72,22 @@
               <h4 class="mb-2">Adventure starts here 🚀</h4>
               <p class="mb-4">Make your app management easy and fun!</p>
 
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <form id="formAuthentication" class="mb-3" action="index.html" @submit.prevent="register">
                 <div class="mb-3">
                   <label for="username" class="form-label">Username</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="username"
-                    name="username"
+                    id="name"
+                    name="name"
                     placeholder="Enter your username"
+                    v-model="user.name"
                     autofocus
                   />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" v-model="user.email" />
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Password</label>
@@ -97,7 +98,23 @@
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password"
+                      aria-describedby="password" v-model="user.password"
+                    />
+                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                  </div>
+                </div>
+                <div class="mb-3 form-password-toggle">
+                  <label class="form-label" for="password">Password Confirmation</label>
+                  <div class="input-group input-group-merge">
+                    <input
+                      id="password_confirmation"
+                      name="password_confirmation"
+                      type="password"
+                      autocomplete="current-password"
+                      required=""
+                      class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                      placeholder="Retype Password"
+                      v-model="user.password_confirmation"
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
@@ -112,7 +129,7 @@
                     </label>
                   </div>
                 </div>
-                <button class="btn btn-primary d-grid w-100">Sign up</button>
+                <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
               </form>
 
               <p class="text-center">
@@ -130,3 +147,23 @@
 
     <!-- / Content -->
 </template>
+
+<script setup>
+import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
+import { useAuth } from '../store/auth';
+const router = useRouter();
+const store = useAuth();
+const user = reactive({
+	name: '',
+	email: '',
+	password: '',
+	password_confirmation: '',
+});
+const register = async () => {
+	await store.register(user);
+	router.replace({
+		name: 'loginView',
+	});
+};
+</script>

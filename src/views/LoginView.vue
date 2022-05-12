@@ -26,15 +26,16 @@
               <p class="mb-4">Human Resources Management Igmma-Corp</p>
               <!-- <p class="mb-4">Please sign-in to your account and start the adventure</p> -->
 
-              <form id="formAuthentication" class="mb-3" action="#" method="POST">
+              <form id="formAuthentication" class="mb-3" @submit.prevent="login">
                 <div class="mb-3">
                   <label for="email" class="form-label d-flex justify-content-between">Email or Username</label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
-                    name="email-username"
+                    name="email"
                     placeholder="Enter your email or username"
+                    v-model="user.email"
                     autofocus required
                   />
                 </div>
@@ -52,7 +53,8 @@
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password" required
+                      aria-describedby="password"
+                      v-model="user.password" required
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
@@ -88,10 +90,22 @@
   </div> -->
 </template>
 
-<script>
-export default {
-  name:'loginView'
-}
+<script setup>
+import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
+import { useAuth } from '../store/auth';
+const router = useRouter();
+const store = useAuth();
+const user = reactive({
+	email: '',
+	password: '',
+});
+const login = async () => {
+	await store.login(user);
+	router.replace({
+		name: 'dashboardView',
+	});
+};
 </script>
 <style scoped>
   .logo-brand-login{

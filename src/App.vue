@@ -13,9 +13,7 @@
           <router-view/>
         </div>
       </div>
-    </div>
-
-  
+    </div>  
 </template>
 <script setup>
   import HeaderView from '@/components/HeaderComponent.vue'

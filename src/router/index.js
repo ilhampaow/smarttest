@@ -31,119 +31,42 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/DashboardView.vue')
   },
   {
-    path: '/parameter',
-    name: 'parameterView',
-    component: () => import(/* webpackChunkName: "about" */ '../views/ParameterView.vue')
+    path: '/data-peserta',
+    name: 'dataPeserta',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Peserta/DataPeserta.vue')
   },
   {
-    path: '/absensi-karyawan',
-    name: 'absensiKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TingkatAbsensiKaryawan/AbsensiKaryawan.vue')
+    path: '/tambah-data-peserta',
+    name: 'tambahdataPeserta',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Peserta/TambahPeserta.vue')
   },
   {
-    path: '/tambah-absensi-karyawan',
-    name: 'tambahabsensiKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TingkatAbsensiKaryawan/TambahAbsensiKaryawan.vue')
+    path: '/edit-data-peserta/:id',
+    name: 'editdataPeserta',
+    props: true,
+    component: () => import(/* webpackChunkName: "about" */ '../views/Peserta/EditPeserta.vue')
   },
   {
-    path: '/edit-absensi-karyawan',
-    name: 'editabsensiKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/TingkatAbsensiKaryawan/EditAbsensiKaryawan.vue')
+    path: '/view-data-peserta/:id?',
+    name: 'viewdataPeserta',
+    props: true,
+    component: () => import(/* webpackChunkName: "about" */ '../views/Peserta/ViewPeserta.vue')
   },
   {
-    path: '/data-karyawan',
-    name: 'dataKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Karyawan/DataKaryawan.vue')
+    path: '/data-penilaian',
+    name: 'dataPenilaian',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Penilaian/DataPenilaian.vue')
   },
   {
-    path: '/tambah-data-karyawan',
-    name: 'tambahdataKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Karyawan/TambahKaryawan.vue')
+    path: '/tambah-data-penilaian',
+    name: 'tambahdataPenilaian',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Penilaian/TambahPenilaian.vue')
   },
   {
-    path: '/edit-data-karyawan',
-    name: 'editdataKaryawan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Karyawan/EditKaryawan.vue')
-  },
-  {
-    path: '/sales-revenue',
-    name: 'salesRevenue',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SalesRevenue/SalesRevenue.vue')
-  },
-  {
-    path: '/tambah-sales-revenue',
-    name: 'tambahSalesRevenue',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SalesRevenue/TambahSalesRevenue.vue')
-  },
-  {
-    path: '/edit-sales-revenue',
-    name: 'editSalesRevenue',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SalesRevenue/EditSalesRevenue.vue')
-  },
-  {
-    path: '/profit',
-    name: 'profitView',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Profit/ProfitView.vue')
-  },
-  {
-    path: '/tambah-profit',
-    name: 'tambahProfitView',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Profit/TambahProfitView.vue')
-  },
-  {
-    path: '/edit-profit',
-    name: 'editProfitView',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Profit/EditProfitView.vue')
-  },
-  {
-    path: '/biaya-pegawai',
-    name: 'biayaPegawai',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BiayaPegawai/BiayaPegawai.vue')
-  },
-  {
-    path: '/tambah-biaya-pegawai',
-    name: 'tambahBiayaPegawai',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BiayaPegawai/TambahBiayaPegawai.vue')
-  },
-  {
-    path: '/edit-biaya-pegawai',
-    name: 'editBiayaPegawai',
-    component: () => import(/* webpackChunkName: "about" */ '../views/BiayaPegawai/EditBiayaPegawai.vue')
-  },
-  {
-    path: '/career-path',
-    name: 'careerPath',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CareerPath/CareerPath.vue')
-  },
-  {
-    path: '/tambah-career-path',
-    name: 'tambahCareerPath',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CareerPath/TambahCareerPath.vue')
-  },
-  {
-    path: '/edit-career-path',
-    name: 'editCareerPath',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CareerPath/EditCareerPath.vue')
-  },
-  {
-    path: '/kepuasan-user',
-    name: 'kepuasanUser',
-    component: () => import(/* webpackChunkName: "about" */ '../views/KepuasanUser/KepuasanUser.vue')
-  },
-  {
-    path: '/tambah-kepuasan-user',
-    name: 'tambahKepuasanUser',
-    component: () => import(/* webpackChunkName: "about" */ '../views/KepuasanUser/TambahKepuasanUser.vue')
-  },
-  {
-    path: '/edit-kepuasan-user',
-    name: 'editKepuasanUser',
-    component: () => import(/* webpackChunkName: "about" */ '../views/KepuasanUser/EditKepuasanUser.vue')
-  },
-  {
-    path: '/laporan-kehadiran',
-    name: 'laporanKehadiran',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Laporan/LaporanKehadiran.vue')
+    path: '/edit-data-penilaian/:id',
+    name: 'editdataPenilaian',
+    props: true,
+    component: () => import(/* webpackChunkName: "about" */ '../views/Penilaian/EditPenilaian.vue')
   },
 ]
 

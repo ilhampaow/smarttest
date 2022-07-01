@@ -29,6 +29,7 @@
                       d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
                       id="path-5"
                     ></path>
+
                   </defs>
                   <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
@@ -59,7 +60,7 @@
                   </g>
                 </svg>
               </span>
-              <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2">SMART TEST</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -78,107 +79,36 @@
               </router-link>
             </li>
             <li class="menu-item">
-              <router-link class="menu-link" to="/parameter">
-                <i class="menu-icon tf-icons bx bx-customize"></i>
-                <div data-i18n="Analytics">Parameter</div>
-              </router-link>
-            </li>
-            
-
-            <!-- Layouts -->
-            <!-- <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
-              </a>
-
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Without menu</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Without navbar</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
-                  </a>
-                </li>
-              </ul>
-            </li> -->
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">hrd</span>
-            </li>
-
-            <li class="menu-item">
-              <router-link class="menu-link" to="/data-karyawan">
+              <router-link class="menu-link" to="/data-peserta">
                 <i class='menu-icon tf-icons bx bx-user-pin' ></i>
-                <div data-i18n="Analytics">Data Karyawan</div>
+                <div data-i18n="Analytics">Data Peserta</div>
               </router-link>
             </li>
             <li class="menu-item">
-              <router-link class="menu-link" to="/absensi-karyawan">
-                <i class='menu-icon tf-icons bx bxs-calendar-plus'></i>
-                <div data-i18n="Analytics">Absensi Karyawan</div>
-              </router-link>
-            </li>
-            <li class="menu-item">
-              <router-link class="menu-link" to="/sales-revenue">
-                <i class='menu-icon tf-icons bx bx-money'></i>
-                <div data-i18n="Analytics">Sales Revenue</div>
-              </router-link>
-            </li>
-            <li class="menu-item">
-              <router-link class="menu-link" to="/profit">
+              <router-link class="menu-link" to="/data-penilaian">
                 <i class='menu-icon tf-icons bx bx-bar-chart-alt'></i>
-                <div data-i18n="Analytics">Profit</div>
+                <div data-i18n="Analytics">Penilaian</div>
               </router-link>
             </li>
             <li class="menu-item">
-              <router-link class="menu-link" to="/biaya-pegawai">
-                <i class='menu-icon tf-icons bx bx-briefcase-alt-2 bx-flip-horizontal' ></i>
-                <div data-i18n="Analytics">Biaya Pegawai</div>
+              <router-link class="menu-link" to="/hasil">
+                <i class='menu-icon tf-icons bx bx-money'></i>
+                <div data-i18n="Analytics">Hasil</div>
               </router-link>
             </li>
             <li class="menu-item">
-              <router-link class="menu-link" to="/career-path">
-                <i class='menu-icon tf-icons bx bx-network-chart'></i>
-                <div data-i18n="Analytics">Career Path</div>
+              <router-link class="menu-link" to="/admin">
+                <i class='menu-icon tf-icons bx bx-edit'></i>
+                <div data-i18n="Analytics">Admin</div>
               </router-link>
             </li>
             <li class="menu-item">
-              <router-link class="menu-link" to="/kepuasan-user">
-                <i class='menu-icon tf-icons bx bxs-comment-dots'></i>
-                <div data-i18n="Analytics">Kepuasan User</div>
+              <router-link class="menu-link" to="/logout">
+                <i class='menu-icon tf-icons bx bx-briefcase-alt-2' ></i>
+                <div data-i18n="Analytics">Loguot</div>
+                
               </router-link>
             </li>
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Laporan</span>
-            </li>
-
-            <li class="menu-item">
-              <router-link class="menu-link" to="/laporan-kehadiran">
-                <i class='menu-icon tf-icons bx bxs-report'></i>
-                <div data-i18n="Analytics">Laporan Kehadiran</div>
-              </router-link>
-            </li>
-
           </ul>
         </aside>
         <!-- / Menu -->

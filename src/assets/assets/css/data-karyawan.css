@@ -1,0 +1,12 @@
+.table-view-karyawan th {
+  width: 250px;
+  vertical-align: top;
+}
+.table-view-karyawan td {
+  width: 750px;
+  vertical-align: top;
+}
+
+.table-view-karyawan tr:nth-child(even) {
+  background: rgba(219, 232, 235, 0.3);
+}

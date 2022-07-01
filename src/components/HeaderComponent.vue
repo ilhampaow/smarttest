@@ -16,7 +16,7 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center">
-                  Igmma Corp HRMS
+                  SMART TEST
                   <!-- <i class="bx bx-search fs-4 lh-0"></i>
                   <input
                     type="text"
@@ -39,7 +39,7 @@
                     data-size="large"
                     data-show-count="true"
                     aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                    >Star</a
+                    >Admin</a
                   >
                 </li>
 
